@@ -110,10 +110,8 @@ def enforcetypes(func: typing.Callable, strict: bool = False) -> typing.Callable
         TypeError: if the type of an argument or the function's 
             return type does not match the function's signature.
     """
-    if not isinstance(func, typing.Callable):
-        raise TypeError("object passed must be a 'Callable' object")
-    elif not isinstance(strict, bool):
-        raise TypeError("'strict' parameter must be a 'bool' instance")
+    __check_if_type_is_valid(func, "func", typing.Callable, False)
+    __check_if_type_is_valid(strict, "strict", bool, False)
 
     func_signature = inspect.signature(func)
     func_params = func_signature.parameters
