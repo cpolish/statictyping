@@ -10,9 +10,9 @@ function below:
 def sqrt(num: numbers.Number) -> float:
     return num**0.5
 
->> sqrt(2) -- returns 1.4142135623730951
->> sqrt(3.5) -- returns 1.8708286933869707
->> sqrt("2") -- raises TypeError
+>>> sqrt(2) -- returns 1.4142135623730951
+>>> sqrt(3.5) -- returns 1.8708286933869707
+>>> sqrt("2") -- raises TypeError
 
 If the signature was changed to provide an incorrect return type, an 
 exception will be raised as well.
@@ -21,7 +21,7 @@ exception will be raised as well.
 def sqrt(num: numbers.Number) -> str:
     return num**0.5
 
->> sqrt(2) -- raises TypeError
+>>> sqrt(2) -- raises TypeError
 """
 import collections.abc
 import inspect
